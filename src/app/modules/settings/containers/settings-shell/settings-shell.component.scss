@@ -1,0 +1,91 @@
+@import '/src/styles/core/color-pallete';
+
+:host {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background: url('/assets/background/back-line.png') repeat-x center left;
+    background-color: $background-main;
+
+}
+
+.avatar {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.wrap-avatar {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .avatar-mask {
+        opacity: 1;
+    }
+}
+
+.action {
+    position: relative;
+    cursor: pointer;
+    transition: transform .2s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.img-action {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.input-hidden {
+    display: none;
+
+}
+
+.avatar-mask {
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .7);
+    justify-content: center;
+    align-items: center;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.icon-avatar {
+    font-size: 40px;
+    color: #fff;
+}
+
+.settings-item {
+    border: 10px solid #fff;
+    border-radius: 50%;
+    background-color: $background-main;
+    box-shadow: 4px 6px 7px #A1A8AF;
+}
+
+.large {
+    width: 350px;
+    height: 350px;
+}
+
+.middle {
+    width: 100px;
+    height: 100px;
+}

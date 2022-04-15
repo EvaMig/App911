@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    align-items: flex-end;
+    flex: 60%;
+    height: 100%;
+    background-color: darkgray;
+}
+
+.wrap-slider {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.item {
+    display: block;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
