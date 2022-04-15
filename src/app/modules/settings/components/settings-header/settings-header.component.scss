@@ -1,0 +1,6 @@
+@import '/src/styles/core/color-pallete';
+
+:host {
+    display: flex;
+    background-color: $background-header;
+}
