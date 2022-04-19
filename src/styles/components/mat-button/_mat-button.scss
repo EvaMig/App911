@@ -1,0 +1,13 @@
+.mat-stroked-button.mat-accent {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+.mat-stroked-button {
+    background-color: white;
+
+    &:hover {
+        background-color: #dbe3eb;
+        box-shadow: 1px 1px 1px white, -1px -1px 1px white;
+    }
+}

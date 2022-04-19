@@ -1,6 +1,8 @@
-import { ConvertPropertyBindingResult } from '@angular/compiler/src/compiler_util/expression_converter';
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Observable, Subscriber } from 'rxjs';
+import { SettingsDialogComponent } from '../../components/settings-dialog/settings-dialog.component';
 
 const avatarList = [
   'assets/avatars/cat400.png',
@@ -11,27 +13,37 @@ const avatarList = [
 @Component({
   selector: 'app-settings-shell',
   templateUrl: './settings-shell.component.html',
-  styleUrls: ['./settings-shell.component.scss']
+  styleUrls: ['./settings-shell.component.scss'],
+  providers: [
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+    { provide: MatDialogRef, useValue: {} }
+  ]
 })
 export class SettingsShellComponent implements OnInit {
 
+  public dialogRef?: MatDialogRef<SettingsDialogComponent>;
   public currentAvatar: string = '';
 
-  constructor() { }
+  constructor(private _route: Router, @Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     const index = Math.floor(Math.random()*(avatarList.length));
     this.currentAvatar = avatarList[index];
   }
 
+  openSettings(dataConfig: any): void {
+    this.dialogRef = this.dialog.open(SettingsDialogComponent, {
+      width: '50%'
+    })
+  }
+
   onFileSelected(event: any): void {
-    const files = event.target.files[0];
-    console.log(files);
+    const file = event.target.files[0];
     const preview = {
-      path64: this.convertToBase64(files),
+      path64: this.convertToBase64(file),
     };
 
-    preview.path64.subscribe((x) => this.currentAvatar = x);
+    preview.path64.subscribe((previewFile) => this.currentAvatar = previewFile);
 
   }
 
@@ -54,4 +66,13 @@ export class SettingsShellComponent implements OnInit {
       subscriber.complete();
     };
   }
+
+  navigateToHome(): void {
+    this._route.navigate(['home']);
+  }
+
+  navigateToExit(): void {
+    this._route.navigate(['login']);
+  }
+
 }

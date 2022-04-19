@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +9,14 @@ import { Router } from '@angular/router';
 })
 export class StartFormComponent implements OnInit {
 
+  formAuthorization: FormGroup;
   constructor(private _route: Router) { }
 
   ngOnInit(): void {
+    this.formAuthorization = new FormGroup({
+      login: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required]),
+    });
   }
 
   navigateToHome(): void {
