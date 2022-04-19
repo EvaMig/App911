@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-shell',
@@ -8,12 +7,9 @@ import { Router } from '@angular/router';
 })
 export class HomeShellComponent implements OnInit {
 
-  constructor(private _route: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  navigateToSettings(): void {
-    this._route.navigate(['settings']);
-  }
 }

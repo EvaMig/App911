@@ -1,2 +1,21 @@
-<p>home-shell works!</p>
-<button (click)="navigateToSettings()">Settings</button>
+<app-header></app-header>
+    <div class="main-content">
+        <div class="wrap-title">
+            <img src="assets/logo/_logo_fin.png" alt="911"/>
+            <p class="logo-subtitle">WHAT IS YOUR <span>EMERGENCY?</span></p>
+        </div>
+            <ul class="main-actions">
+                <li class="contact">
+                    <img src="assets/logo/new-message.png" alt="newmessage">
+                </li>
+                <li class="contact">
+                    <img src="assets/logo/call.png" alt="call">
+                </li>
+                <li class="contact">
+                    <img src="assets/logo/ready-message.png" alt="readymessage">
+                </li>
+            </ul>
+        <app-advices-shell></app-advices-shell>
+        <app-news-shell></app-news-shell>
+    </div>
+<app-footer></app-footer>

@@ -14,13 +14,13 @@
             />
         </div>
     </div>
-    <div class="settings-item middle action">
+    <div class="settings-item middle action" (click)="navigateToHome()">
         <img class="img-action" src="assets/avatars/homeicon400.png" alt="home">
     </div>
-    <div class="settings-item middle action">
+    <div class="settings-item middle action" (click)="openSettings($event)">
         <img class="img-action" src="assets/avatars/settingsicon400.png" alt="settings">
     </div>
-    <div class="settings-item middle action">
+    <div class="settings-item middle action" (click)="navigateToExit()">
         <img class="img-action" src="assets/avatars/exiticon400.png" alt="exit">
     </div>
 </div>

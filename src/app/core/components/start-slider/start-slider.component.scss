@@ -1,9 +1,11 @@
+@import '/src/styles/core/color-pallete';
+
 :host {
     display: flex;
     align-items: flex-end;
     flex: 60%;
     height: 100%;
-    background-color: darkgray;
+    background-color: white;
 }
 
 .wrap-slider {
@@ -13,9 +15,16 @@
 
 .item {
     display: block;
-    background-color: red;
+    background-color: $background-main;
     width: 10px;
     height: 10px;
     border-radius: 50%;
 }
 
+.slide {
+    height: 100%;
+
+    img {
+        max-width: 100%;
+    }
+}

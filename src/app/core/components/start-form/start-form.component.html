@@ -1,4 +1,24 @@
-    <p>Registration</p>
-    <button class="action">Create</button>
-    <p>Already have an account?</p>
-    <button class="action" (click)="navigateToHome()">Log in</button>
+<div class="authorization">
+    <div class="logo">
+        <img src="assets/logo/_logo_fin.png" alt="911" />
+    </div>
+    <p class="logo-subtitle">WHAT IS YOUR <span>EMERGENCY?</span></p>
+    <h2>Authorization</h2>
+    <div class="form-aut" [formGroup]="formAuthorization">
+        <mat-form-field class="form-element" appearance="fill">
+            <mat-label>Login:</mat-label>
+            <input matInput name="login" placeholder="Fuck you you fucking fuck" formControlName="login" />
+        </mat-form-field>
+        <mat-form-field class="form-element" appearance="fill">
+            <mat-label>Password:</mat-label>
+            <input matInput name="password" type="password" formControlName="password" />
+        </mat-form-field>
+    </div>
+
+    <div class="buttons-actions">
+        <button 
+            mat-stroked-button color="accent" 
+            (click)="navigateToHome()"
+        >Log in</button>
+    </div>
+</div>

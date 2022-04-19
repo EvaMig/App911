@@ -1,0 +1,15 @@
+@import '/src/styles/core/color-pallete';
+
+.mat-radio-outer-circle {
+    border-color: $background-main;
+    pointer-events: all;
+}
+
+// .mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted mat-tab-label-active
+
+.slider {
+    .mat-focus-indicator {
+        pointer-events: none;
+    }
+}
+

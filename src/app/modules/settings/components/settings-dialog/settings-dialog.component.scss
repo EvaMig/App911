@@ -1,0 +1,25 @@
+:host {
+   display: flex;
+   min-height: 200px;
+}
+
+.settings-content {
+    position: relative;
+    width: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.icon-close {
+    font-size: 30px;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
