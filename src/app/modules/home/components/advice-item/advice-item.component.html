@@ -1,7 +1,15 @@
 <div class="current-advice">
-    <h3>{{ data.title }}</h3>
-    <p>{{ data.description }}</p>
-    <button
-        mat-stroked-button color="accent"
-    >next</button>
+    <div class="wrap-advice">
+        <h3 class="advice-title"><span>{{ data.title }}</span></h3>
+        <p class="advice-description">{{ data.description }}</p>
+        <div class="actions">
+        <button
+            mat-stroked-button
+            color="accent"
+            (click)="goToCurrentAdvice(data)"
+        >
+            Next
+        </button>
+        </div>
+    </div>
 </div>

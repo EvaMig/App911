@@ -1,5 +1,3 @@
-<div *ngFor="let new of newsList">
-    <app-new-item>
+<app-new-item *ngFor="let new of newsList" [data]="new">
 
-    </app-new-item>
-</div>
+</app-new-item>

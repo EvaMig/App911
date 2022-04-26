@@ -6,6 +6,7 @@ import { SettingsHeaderComponent } from './components/settings-header/settings-h
 import { SettingsFooterComponent } from './components/settings-footer/settings-footer.component';
 import { SettingsDialogComponent } from './components/settings-dialog/settings-dialog.component';
 import { MaterialModule } from 'src/app/shared/modules/material/material.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -20,6 +21,7 @@ import { MaterialModule } from 'src/app/shared/modules/material/material.module'
     CommonModule,
     SettingsRoutingModule,
     MaterialModule,
+    SharedModule,
   ]
 })
 export class SettingsModule { }

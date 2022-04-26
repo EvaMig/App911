@@ -1,0 +1,9 @@
+@import '/src/styles/core/color-pallete';
+
+
+:host {
+    display: flex;
+    padding: 50px;
+    background-color: $background-main;
+    gap: 50px;
+}

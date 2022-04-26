@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-advice-item',
@@ -8,9 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class AdviceItemComponent implements OnInit {
 
   @Input() data: any;
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  goToCurrentAdvice(event: any): void {
+    console.log(event);
+    this.router.navigate(['home/advice', event.id]);
   }
 
 }

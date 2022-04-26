@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthorizationService } from 'src/app/shared/services/authorization.service';
 
 @Component({
   selector: 'app-start-form',
@@ -10,7 +11,8 @@ import { Router } from '@angular/router';
 export class StartFormComponent implements OnInit {
 
   formAuthorization: FormGroup;
-  constructor(private _route: Router) { }
+  result: any;
+  constructor(private _route: Router, private authorizationService: AuthorizationService) { }
 
   ngOnInit(): void {
     this.formAuthorization = new FormGroup({
@@ -20,6 +22,13 @@ export class StartFormComponent implements OnInit {
   }
 
   navigateToHome(): void {
-    this._route.navigate(['home']);
+    if(this.formAuthorization.invalid) {
+      this.formAuthorization.markAllAsTouched()
+    } else {
+      this.result = this.authorizationService.login(this.formAuthorization.value);
+      if(this.result.status === 2) {
+        this._route.navigate(['home']);
+      }
+    }
   }
 }

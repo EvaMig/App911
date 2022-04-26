@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
 
 
@@ -11,6 +12,7 @@ import { LogoComponent } from './components/logo/logo.component';
     HeaderComponent,
     FooterComponent,
     LogoComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     CommonModule,
@@ -19,6 +21,7 @@ import { LogoComponent } from './components/logo/logo.component';
     HeaderComponent,
     FooterComponent,
     LogoComponent,
+    SafeHtmlPipe,
   ]
 })
 export class SharedModule { }

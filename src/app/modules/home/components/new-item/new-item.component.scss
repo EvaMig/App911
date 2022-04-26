@@ -1,0 +1,42 @@
+@import '/src/styles/core/color-pallete';
+
+:host {
+    flex: 1;
+}
+
+.current-advice {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.wrap-advice {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.advice-title {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    color: $background-footer;
+    span {
+        padding: 10px;
+        // background-color: $background-main;
+    }
+}
+
+.advice-description {
+    line-height: 1.5;
+}
+
+.actions {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    flex: 1 1 auto;
+}

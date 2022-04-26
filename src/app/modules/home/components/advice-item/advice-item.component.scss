@@ -1,4 +1,63 @@
+@import '/src/styles/core/color-pallete';
+
 :host {
-    border: 1px solid black;
     flex: 1;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.current-advice {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    // background-color: $background-main;
+    // box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.wrap-advice {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+
+}
+
+.wrap-advice:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.advice-title {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    color: $background-footer;
+    span {
+        padding: 10px;
+        // background-color: $background-main;
+    }
+}
+
+.advice-description {
+    line-height: 1.5;
+}
+
+.actions {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    flex: 1 1 auto;
+
+    button {
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 20px;
+        color: $background-footer;
+    }
+
 }

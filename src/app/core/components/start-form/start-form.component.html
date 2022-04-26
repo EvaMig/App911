@@ -7,12 +7,18 @@
     <div class="form-aut" [formGroup]="formAuthorization">
         <mat-form-field class="form-element" appearance="fill">
             <mat-label>Login:</mat-label>
-            <input matInput name="login" placeholder="Fuck you you fucking fuck" formControlName="login" />
+            <input matInput name="login" placeholder="Enter your login" formControlName="login" />
         </mat-form-field>
+        <div class="error">
+            <p *ngIf="result?.status===0">{{result?.message}}</p>
+        </div>
         <mat-form-field class="form-element" appearance="fill">
             <mat-label>Password:</mat-label>
             <input matInput name="password" type="password" formControlName="password" />
         </mat-form-field>
+        <div class="error">
+            <p *ngIf="result?.status===1">{{result?.message}}</p>
+        </div>
     </div>
 
     <div class="buttons-actions">
