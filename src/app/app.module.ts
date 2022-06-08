@@ -10,6 +10,11 @@ import { StartFormComponent } from './core/components/start-form/start-form.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './shared/modules/material/material.module';
+import { PageNewsShellComponent } from './modules/home/pages/page-news-shell/page-news-shell.component';
+import { PsgeAdvicesShellComponent } from './modules/home/pages/psge-advices-shell/psge-advices-shell.component';
+import { PageDonatesShellComponent } from './modules/home/pages/page-donates-shell/page-donates-shell.component';
+import { PageAboutUsShellComponent } from './modules/home/pages/page-about-us-shell/page-about-us-shell.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +23,10 @@ import { MaterialModule } from './shared/modules/material/material.module';
     NotFoundComponent,
     StartSliderComponent,
     StartFormComponent,
+    PageNewsShellComponent,
+    PsgeAdvicesShellComponent,
+    PageDonatesShellComponent,
+    PageAboutUsShellComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +34,8 @@ import { MaterialModule } from './shared/modules/material/material.module';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

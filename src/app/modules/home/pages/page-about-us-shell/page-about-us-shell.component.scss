@@ -1,0 +1,119 @@
+@import '/src/styles/core/color-pallete';
+
+:host {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.wrap {
+    background-color: $background-main;
+    padding: 0 50px;
+    padding-top: 20px;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-title {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 30px;
+    color: $background-footer;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+
+    img {
+        max-width: 90%;
+        border-radius: 50%;
+    }
+}
+
+.member1,
+.member2,
+.member3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+
+    p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        max-width: 500px;
+    }
+
+    h4 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        color: #C2185B;
+    }
+}
+
+.mission-title {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 30px;
+    color: $background-footer;
+}
+
+.mission {
+    font-family: "Raleway", sans-serif;
+    font-size: 25px;
+    padding: 40px;
+    justify-content: center;
+    line-height: 35px;
+    text-align: center;
+    max-width: 900px;
+}
+
+.partners-titles {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 30px;
+    color: $background-footer;
+}
+
+.partners {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 0;
+
+    & > div {
+        width: 300px;
+
+        img {
+            filter: grayscale(80%);
+            transition: filter .2s;
+            cursor: pointer;
+
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+}

@@ -39,4 +39,11 @@
     justify-content: right;
     align-items: flex-end;
     flex: 1 1 auto;
+
+    button {
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 20px;
+        color: $background-footer;
+    }
+
 }

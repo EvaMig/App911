@@ -2,5 +2,68 @@
 
 :host {
     display: flex;
+    width: 100%;
+    padding: 20px 0;
     background-color: $background-footer;
+}
+
+h6 {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+    font-size: 18px;
+}
+
+.footer-about,
+.footer-contacts,
+.footer-social,
+.footer-language {
+    flex: 1;
+    padding: 0 70px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+li {
+    margin-bottom: 10px;
+
+    &:hover {
+        color: #C2185B;
+        cursor: pointer;
+    }
+}
+
+.footer-social {
+    h6 {
+        text-align: center;
+    }
+
+    ul {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+        li {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 20px;
+        }
+    }
+}
+
+.select-language {
+    // color: white;
 }

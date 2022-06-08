@@ -1,7 +1,18 @@
-<div class="img-description">
-    <!-- <img src="assets/advices/advices-base.jpg" alt="advices" /> -->
+<div class="content">
+    <div class="img-description">
+        <!-- <img src="assets/advices/advices-base.jpg" alt="advices" /> -->
+    </div>
+    <div class="list-advices">
+        <app-advice-item *ngFor="let advice of advicesList" [data]="advice">
+        </app-advice-item>
+    </div>
 </div>
-<div class="list-advices">
-    <app-advice-item *ngFor="let advice of advicesList" [data]="advice">
-    </app-advice-item>
+<div class="all-advices">
+    <button
+        mat-stroked-button
+        color="accent"
+        (click)="navigateToAdvices()"
+    >
+        All advices
+    </button>
 </div>

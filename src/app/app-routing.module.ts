@@ -6,6 +6,7 @@ import { NotFoundComponent } from './core/not-found/not-found.component';
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: 'login'},
   {path:'login', pathMatch: 'full', component: AuthorizationComponent},
+
   {
     path:'home', 
     loadChildren: () => import('./modules/home/home.module').then(module => module.HomeModule),

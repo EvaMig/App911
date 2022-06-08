@@ -1,0 +1,41 @@
+<header>
+    <div class="logo">
+        <img src="assets/logo/_logo_fin.png" alt="911" />
+    </div>
+    <div class="title">
+        <p class="logo-subtitle">WHAT IS YOUR <span>EMERGENCY?</span></p>
+        <nav>
+            <ul>
+                <li (click)="navigateToHome()">
+                    <a>Home</a>
+                </li>
+                <li (click)="navigateToAdvices()">
+                    <a>Advices</a>
+                </li>
+                <li (click)="navigateToNews()">
+                    <a>News</a>
+                </li>
+                <li (click)="navigateToAboutUs()">
+                    <a>About us</a>
+                </li>
+                <li (click)="navigateToDonates()">
+                    <a>Donates</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="actions">
+        <button 
+            mat-stroked-button color="accent" 
+            (click)="navigateToSettings()"
+        >
+            <span class="material-symbols-outlined icon">person</span>
+        </button>
+        <button 
+            mat-stroked-button color="accent" 
+            (click)="navigateToExit()"
+        >
+            <span class="material-symbols-outlined icon">logout</span>
+        </button>
+    </div>
+</header>

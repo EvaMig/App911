@@ -1,3 +1,27 @@
-<app-new-item *ngFor="let new of newsList" [data]="new">
-
-</app-new-item>
+<div class="content">
+    <button
+        mat-stroked-button
+        color="accent"
+        (click)="goToPrev()"
+    >
+        <
+    </button>
+    <app-new-item *ngFor="let new of newsList" [data]="new">
+    </app-new-item>
+    <button
+        mat-stroked-button
+        color="accent"
+        (click)="goToNext()"
+    >
+        >
+    </button>
+</div>
+<div class="all-news">
+    <button
+        mat-stroked-button
+        color="accent"
+        (click)="navigateToNews()"
+    >
+        All news
+    </button>
+</div>

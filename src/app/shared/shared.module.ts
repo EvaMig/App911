@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from '../core/components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { MaterialModule } from './modules/material/material.module';
 
 
 
@@ -16,6 +17,7 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
   ],
   exports: [
     HeaderComponent,

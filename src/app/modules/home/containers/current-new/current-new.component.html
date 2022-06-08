@@ -1,1 +1,19 @@
-<p>current-new works!</p>
+<div class="header">
+    <app-header></app-header>
+</div>
+<mat-spinner *ngIf="!isUploaded"></mat-spinner>
+<div *ngIf="isUploaded" class="content">
+    <div class="img-description">
+        <!-- <img [src]="currentAdvice.image" [alt]="currentAdvice.title" /> -->
+    </div>
+    <div class="wrap-content">
+        <h2>
+            <span>
+                {{ currentNew.title }}
+            </span>
+        </h2>
+        <div [innerHTML]="currentNew.content | safeHtml" class="advice-content">
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

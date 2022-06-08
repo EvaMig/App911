@@ -4,8 +4,12 @@
         <p class="advice-description">{{ data.description }}</p>
         <div class="actions">
         <button
-            mat-stroked-button color="accent"
-        >Next</button>
+            mat-stroked-button
+            color="accent"
+            (click)="goToCurrentNew(data)"
+        >
+        Next
+        </button>
         </div>
     </div>
 </div>
